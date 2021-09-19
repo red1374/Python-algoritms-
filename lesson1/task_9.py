@@ -6,9 +6,9 @@ if not a.isdigit() or not b.isdigit() or not c.isdigit():
     exit(0)
 
 a, b, c = int(a), int(b), int(c)
-if b < a < c or c < a < b:
+if b < a < c or c < a < b or a == b:
     print(f'Middle value is {a}')
-elif a < b < c or c < b < a:
+elif a < b < c or c < b < a or b == c:
     print(f'Middle value is {b}')
 else:
     print(f'Middle value is {c}')
