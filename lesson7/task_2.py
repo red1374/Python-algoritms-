@@ -60,7 +60,8 @@ def merge_sort(unsorted_list):
     return merge(left_list, right_list)
 
 
-# rand_list = [randint(0, 50) for _ in range(15)]
-rand_list = [round(random() * 100, 2) for _ in range(15)]
-print(rand_list)
-print(merge_sort(rand_list))
+if (__name__ == "__main__"):
+    # rand_list = [randint(0, 50) for _ in range(15)]
+    rand_list = [round(random() * 100, 2) for _ in range(15)]
+    print(rand_list)
+    print(merge_sort(rand_list))

@@ -6,6 +6,7 @@
 
 M = 7
 from random import randint, choice
+from task_2 import merge_sort
 
 
 def quickselect_median(r_list):
@@ -46,7 +47,9 @@ def quickselect(r_list, k):
 
 
 rand_list = [randint(-50, 50) for i in range(2 * M + 1)]
-print(rand_list)
-print(f'Median is: {quickselect_median(rand_list)}')
-# print(sorted(rand_list))
-# print(sorted(rand_list)[len(rand_list) // 2])
+print(f'List of random values:\n\t{rand_list}')
+print(f'Median found with Quick select algorithm is: {quickselect_median(rand_list)}')
+
+sorted_list = merge_sort(rand_list)
+print(f'\nSorted with merge\n\t{sorted_list}')
+print(f'Median is: {sorted_list[len(rand_list) // 2]}')
